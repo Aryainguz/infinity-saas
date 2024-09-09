@@ -100,9 +100,12 @@ export function SiteHeader() {
       <>
          <header className="animate-fade-in fixed left-0 top-0 z-50 w-full -translate-y-4 border-b opacity-0 backdrop-blur-md [--animation-delay:600ms]">
             <div className="container flex h-14 items-center justify-between">
-               <Link className="text-md flex items-center" href="/">
-                  CoFounder AI
-               </Link>
+            <div className="shrink-0">
+              <Link href={"/"} className="text-2xl text-white font-bold">
+                cofounder
+                <span className="text-blue-500">AI</span>
+              </Link>
+            </div>
 
                <div className="ml-auto flex h-full items-center">
                   <Link className="mr-6 text-sm" href="/signin">
