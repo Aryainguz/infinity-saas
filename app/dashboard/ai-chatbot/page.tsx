@@ -14,9 +14,11 @@ import {
     TooltipTrigger,
     TooltipProvider,
 } from '../../../components/ui/tooltip'
+import Dashboard from '@/components/HOC/Dashboard'
 
 const page = () => {
     return (
+        <Dashboard>
         <TooltipProvider>
             <div className="flex h-screen w-full flex-col">
                 <header className="bg-background sticky top-0 z-10 flex h-[53px] items-center gap-1 border-b px-4">
@@ -84,6 +86,7 @@ const page = () => {
                 </main>
             </div>
         </TooltipProvider>
+        </Dashboard>
     )
 }
 

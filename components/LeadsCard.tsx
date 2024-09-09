@@ -25,7 +25,7 @@ const LeadsCard = () => {
 
           </CardTitle>
           <CardDescription>
-            Use inguz.AI to generate your leads better than ever.
+            Use cofounderAI to generate your leads better than ever.
           </CardDescription>
         </CardHeader>
         <CardContent>

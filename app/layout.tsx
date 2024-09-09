@@ -4,6 +4,7 @@ import { ThemeProvider } from '../components/theme-provider'
 import { Toaster } from '../components/ui/sonner'
 import { ny } from '../lib/utils'
 import '../app/styles/globals.css'
+import { EmailsContextProvider } from '@/context/emailsContext'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -32,7 +33,7 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          {children}
+          <EmailsContextProvider>{children}</EmailsContextProvider>
           <Toaster />
         </ThemeProvider>
       </body>

@@ -1,13 +1,14 @@
-interface DashboardProps {
-  children: React.ReactNode
-}
+import Dashboard from '@/components/HOC/Dashboard'
+import React from 'react'
 
-const DashboardMain = ({ children }: DashboardProps) => {
+const page = () => {
   return (
     <div>
-      {children}
+        <Dashboard>
+            Dashboard
+        </Dashboard>
     </div>
   )
 }
 
-export default DashboardMain 
+export default page
