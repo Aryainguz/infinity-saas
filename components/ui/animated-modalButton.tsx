@@ -1,13 +1,15 @@
 "use client";
+import { useContext, useState } from "react";
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalTrigger
 } from "../ui/animated-modal";
+import { Input } from "./input";
 import { Label } from "./label";
 import { ProcessLoader } from "./ProcessLoader";
-import { Textarea } from "./textarea";
+import { emailsContext } from "@/context/emailsContext";
 
 
 export function AnimatedModalButton() {
@@ -18,6 +20,33 @@ export function AnimatedModalButton() {
     "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
+
+
+  const [campaignInfo,setCampaignInfo] = useState({
+    founder: "",
+    industry: "",
+    purpose: "",
+    name: "",
+    contact: "",
+    location: "",
+    website: "",
+  });
+  const { emailsData } = useContext(emailsContext);
+
+
+  const handleOnClick =async ()=>{
+    if(campaignInfo.contact =="" || campaignInfo.founder =="" || campaignInfo.industry =="" || campaignInfo.location =="" || campaignInfo.name =="" || campaignInfo.purpose =="" || campaignInfo.website ==""){
+      alert("Please Fill All Fields")
+      return 
+    }
+    await fetch("/api/send-mail",
+      {
+        method:"POST",
+        body:JSON.stringify({campaignInfo,emails:emailsData})
+      }
+    )
+  }
+
   return (
     <div className="py-4 flex items-center justify-center">
       <Modal>
@@ -39,11 +68,94 @@ export function AnimatedModalButton() {
         <Label className="my-4">
           Enter about your campaign details
         </Label>
-        <Textarea
-          id="message"
-          placeholder="Enter about your leads campaign target in less than 100 words..."
-          className="border rounded-md my-4 px-8 py-5 w-full focus:outline-none focus:ring-2 focus:ring-primary"
+        <Input placeholder="Enter Founder Name" 
+        className="w-full my-2"
+        required
+        onChange={
+          (e) => {
+            setCampaignInfo({
+              ...campaignInfo,
+              founder: e.target.value
+            })
+        }}
         />
+        <Input placeholder="Enter Your Industry"
+        className="w-full my-2"
+        required
+        onChange={
+          (e) => {
+            setCampaignInfo({
+              ...campaignInfo,
+              industry: e.target.value
+            })
+        }}
+        />
+        <div className="flex flex-row">
+        <Input placeholder="Enter Purpose"
+        className="w-[1/3] my-2 mr-6"
+        required
+        onChange={
+          (e) => {
+            setCampaignInfo({
+              ...campaignInfo,
+              purpose: e.target.value
+            })
+        }}
+        />
+        <Input placeholder="Product/Service Name"
+        className="w-[1/3] my-2"
+        required
+        onChange={
+          (e) => {
+            setCampaignInfo({
+              ...campaignInfo,
+              name: e.target.value
+            })}
+        }
+        />
+         <Input placeholder="Contact Number"
+        className="w-[1/3] my-2 ml-2"
+        required
+        onChange={
+          (e) => {
+            setCampaignInfo({
+              ...campaignInfo,
+              contact: e.target.value
+            })
+          }
+        }
+        />
+        </div>
+      
+        <div className="flex flex-row">
+        <Input placeholder="Location"
+        className="w-[1/2] my-2 mr-6"
+        required
+        onChange={
+          (e)=>{
+            setCampaignInfo({
+            ...campaignInfo,
+            location:e.target.value
+            }
+            )
+          }
+        }
+        />
+        <Input placeholder="Website"
+        required
+        className="w-[1/2] my-2"
+        onChange={
+          (e)=>{
+            setCampaignInfo({
+            ...campaignInfo,
+            website:e.target.value
+            }
+            )
+          }
+        }
+        />
+       
+        </div>
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  items-center justify-center">
@@ -60,7 +172,9 @@ export function AnimatedModalButton() {
               </div>
             </div>
           </ModalContent>
-          <ProcessLoader />
+          <ProcessLoader
+          handleOnClick={handleOnClick}
+          />
         </ModalBody>
       </Modal>
     </div>

@@ -16,17 +16,10 @@ import { useState } from "react";
 export default function Dashboard({ children }: { children: React.ReactNode }) {
   const links = [
     {
-      label: "AI Chatbot",
+      label: "AI WebBot",
       href: '/dashboard/ai-webbot',
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Automations",
-      href: "/dashboard/leads",
-      icon: (
-        <LucideWorkflow className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -41,13 +34,6 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
       href: "#",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Logout",
-      href: "#",
-      icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
