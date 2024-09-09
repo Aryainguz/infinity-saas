@@ -1,13 +1,12 @@
-import Dashboard from '@/components/HOC/Dashboard'
+interface DashboardProps {
+  children: React.ReactNode
+}
 
-const DashboardMain = () => {
+const DashboardMain = ({ children }: DashboardProps) => {
   return (
-    <Dashboard>
     <div>
-        main
+      {children}
     </div>
-        
-        </Dashboard>
   )
 }
 

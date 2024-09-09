@@ -16,8 +16,8 @@ import { useState } from "react";
 export default function Dashboard({ children }: { children: React.ReactNode }) {
   const links = [
     {
-      label: "Dasboard",
-      href: '/dashboard',
+      label: "AI Chatbot",
+      href: '/dashboard/ai-chatbot',
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -89,9 +89,9 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
         </SidebarBody>
       </Sidebar>
       <div className="flex flex-1">
-      <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
-        {/* skeleton loader */}
-        {/* <div className="flex gap-2">
+        <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
+          {/* skeleton loader */}
+          {/* <div className="flex gap-2">
           {[...new Array(4)].map((i) => (
             <div
               key={"first-array" + i}
@@ -107,12 +107,12 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
             ></div>
           ))}
         </div> */}
-        {children}
+          {children}
+        </div>
+        <div className="relative top-2">
+          <ModeToggle />
+        </div>
       </div>
-      <div className="relative top-2">
-        <ModeToggle />
-      </div>
-    </div>
     </div>
   );
 }
