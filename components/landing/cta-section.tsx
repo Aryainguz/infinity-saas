@@ -13,8 +13,8 @@ import {
 import Link from 'next/link'
 import { useEffect, useId, useRef, useState } from 'react'
 import { buttonVariants } from '../../components/ui/button'
-import { ny } from '../../lib/utils'
 import Marquee from '../../components/ui/marquee'
+import { ny } from '../../lib/utils'
 
 const tiles = [
    {

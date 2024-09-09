@@ -1,4 +1,3 @@
-import Dashboard from '@/components/HOC/Dashboard'
 interface DashboardProps {
     children: React.ReactNode
 }

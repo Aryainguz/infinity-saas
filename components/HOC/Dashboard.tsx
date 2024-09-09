@@ -3,12 +3,11 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utilss";
 import {
-  IconArrowLeft,
   IconBrandTabler,
   IconSettings
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { BotMessageSquareIcon, LucideWorkflow } from "lucide-react";
+import { BotMessageSquareIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

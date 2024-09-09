@@ -1,4 +1,5 @@
 "use client";
+import { emailsContext } from "@/context/emailsContext";
 import { useContext, useState } from "react";
 import {
   Modal,
@@ -9,7 +10,6 @@ import {
 import { Input } from "./input";
 import { Label } from "./label";
 import { ProcessLoader } from "./ProcessLoader";
-import { emailsContext } from "@/context/emailsContext";
 
 
 export function AnimatedModalButton() {

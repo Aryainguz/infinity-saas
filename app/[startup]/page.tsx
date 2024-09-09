@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import website from '@/models/website';
-import connectDB from '@/utils/db';
 
-const Page = ({ params }: any) => {
-    const [websiteContent, setWebsiteContent] = useState<any>(null);
+const Page = ({ params }: { params: { startup: string } }) => {
+    const [websiteContent, setWebsiteContent] = useState<any | object>(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            console.log("first")
-            await connectDB();
-            const data = await website.findOne({ name: params.startup });
-            console.log(data);
-            setWebsiteContent(data?.website_content || {}); // Ensure we access website_content
+            try {
+                const response = await fetch(`/api/get-website/${params.startup}`);
+                const data = await response.json();
+                setWebsiteContent(data?.website_content || {}); // Ensure we access website_content
+            } catch (error) {
+                console.error('Error fetching website data:', error);
+            }
         };
 
         fetchData();
@@ -22,14 +22,14 @@ const Page = ({ params }: any) => {
     if (!websiteContent) return <div>Loading...</div>;
 
     return (
-        <>
+        <div className='bg-white'>
             <header className="text-gray-600 body-font">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-10 h-10 text-black p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
-                        <span className="ml-3 text-xl">{params.startup}</span>
+                        <span className="ml-3 text-xl text-black">{params.startup}</span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                         <a className="mr-5 hover:text-gray-900">Home</a>
@@ -56,16 +56,13 @@ const Page = ({ params }: any) => {
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        {/* Assuming heroImageUrl is part of your schema, otherwise update it accordingly */}
-                        <img className="object-cover object-center rounded" alt="hero" src={websiteContent.heroImageUrl} />
+                        <img className="object-cover object-center rounded" alt="hero" src="https://images.unsplash.com/photo-1580983561371-7f4b242d8ec0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     </div>
                 </div>
             </section>
 
-            {/* More sections with data from websiteContent */}
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
-                    {/* Update this section with websiteContent.feature or other data as needed */}
                     <p>{websiteContent.feature}</p>
                 </div>
             </section>
@@ -74,7 +71,6 @@ const Page = ({ params }: any) => {
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-12">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{websiteContent.contact}</h1>
-                        {/* Assuming you might need to use the same content here, adjust accordingly */}
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">{websiteContent.contact}</p>
                     </div>
                     <div className="lg:w-1/2 md:w-2/3 mx-auto">
@@ -125,7 +121,7 @@ const Page = ({ params }: any) => {
                     </p>
                 </div>
             </footer>
-        </>
+        </div>
     );
 };
 

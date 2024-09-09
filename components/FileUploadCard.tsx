@@ -1,5 +1,8 @@
 "use client";
+import { emailsContext } from "@/context/emailsContext";
+import { Workbook } from "exceljs";
 import React, { useContext } from "react";
+import { Button } from "./ui/button";
 import {
   Card,
   CardContent,
@@ -8,9 +11,6 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { Workbook } from "exceljs";
-import { emailsContext } from "@/context/emailsContext";
 
 const FileUploadCard = () => {
   const [file, setFile] = React.useState<File | null>(null);

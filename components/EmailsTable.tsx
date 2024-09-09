@@ -63,7 +63,7 @@ const EmailsTable = () => {
 
 
               
-              {emailsData.map((email: any, index: number) => (
+              {emailsData.map((email: any | string, index: number) => (
                 <>
                 <TableRow key={index}>
                   <TableCell>

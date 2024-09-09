@@ -5,7 +5,6 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { BorderBeam } from '../../components/ui/border-beam'
 import TextShimmer from '../../components/ui/text-shimmer'
-import { Button } from '../../components/ui/button'
 import { FlipWords } from '../ui/flip-words'
 
 export default function HeroSection() {

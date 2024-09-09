@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { FlipWords } from "./ui/flip-words";
 import Link from "next/link";
+import { FlipWords } from "./ui/flip-words";
 
 const Hero = () => {
   return (
