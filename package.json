@@ -21,6 +21,7 @@
     "@radix-ui/react-tooltip": "^1.1.2",
     "@tabler/icons-react": "^3.15.0",
     "ai": "^3.3.28",
+    "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
@@ -30,6 +31,7 @@
     "mongoose": "^8.6.1",
     "next": "14.2.8",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
@@ -42,6 +44,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

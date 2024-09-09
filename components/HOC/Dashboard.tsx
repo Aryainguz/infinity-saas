@@ -17,7 +17,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
   const links = [
     {
       label: "AI Chatbot",
-      href: '/dashboard/ai-chatbot',
+      href: '/dashboard/ai-webbot',
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -132,7 +132,7 @@ export const Logo = () => {
           href={"/"}
           className="text-2xl text-black font-bold dark:text-white"
         >
-          inguz.
+          cofounder
           <span className="text-blue-500">AI</span>
         </Link>
       </motion.span>
