@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="flex items-center justify-between">
             <div className="shrink-0">
               <Link href={"/"} className="text-2xl text-white font-bold">
-                cofounder
+                inguz.
                 <span className="text-blue-500">AI</span>
               </Link>
             </div>
@@ -118,7 +118,7 @@ const Hero = () => {
                 words={[
                   "Automations Officer.",
                   "Marketing Officer.",
-                  "Technology Officer.",
+                  "Sales Officer.",
                 ]}
               />
             </h1>
