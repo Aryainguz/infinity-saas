@@ -5,7 +5,9 @@ import { AlignJustify, XIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { ny } from '../lib/utils'
-import { buttonVariants } from '../components/ui/button'
+import { Button, buttonVariants } from '../components/ui/button'
+import { UserButton, useUser } from '@clerk/nextjs';
+
 
 const menuItem = [
    {
@@ -78,12 +80,14 @@ export function SiteHeader() {
    }
 
    const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false)
+   const user = useUser();
 
    useEffect(() => {
       const html = document.querySelector('html')
       if (html)
          html.classList.toggle('overflow-hidden', hamburgerMenuIsOpen)
    }, [hamburgerMenuIsOpen])
+
 
    useEffect(() => {
       const closeHamburgerNavigation = () => setHamburgerMenuIsOpen(false)
@@ -108,18 +112,31 @@ export function SiteHeader() {
             </div>
 
                <div className="ml-auto flex h-full items-center">
-                  <Link className="mr-6 text-sm" href="/signin">
-                     Log in
-                  </Link>
-                  <Link
-                     className={ny(
-                        buttonVariants({ variant: 'secondary' }),
-                        'mr-6 text-sm',
-                     )}
-                     href="/signup"
-                  >
-                     Sign up
-                  </Link>
+                { !user?
+                 <div>
+                    <Link className="mr-6 text-sm" href="/sign-in">
+                        Log in
+                     </Link>
+                     <Link
+                        className={ny(
+                           buttonVariants({ variant: 'secondary' }),
+                           'mr-6 text-sm',
+                        )}
+                        href="/sign-up"
+                     >
+                        Sign up
+                     </Link>
+                 </div>
+                  
+                  :
+                  <div className='flex gap-3'>
+                     <UserButton afterSignOutUrl='/'/>
+                     <Link href={'/dashboard/ai-mailer'}>
+                     <Button variant='secondary'>Dashboard</Button>
+                     </Link>
+                  </div>
+                  
+                  }
                </div>
                <button
                   className="ml-6 md:hidden"

@@ -2,6 +2,7 @@
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utilss";
+import { UserButton } from "@clerk/nextjs";
 import {
   IconBrandTabler,
   IconSettings
@@ -57,16 +58,10 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           <div>
             <SidebarLink
               link={{
-                label: "Aryan Inguz",
+                label: "",
                 href: "#",
                 icon: (
-                  <Image
-                    src="/avatar.jpg"
-                    className="h-7 w-7 flex-shrink-0 rounded-full"
-                    width={50}
-                    height={50}
-                    alt="Avatar"
-                  />
+                 <UserButton afterSignOutUrl='/'/>
                 ),
               }}
             />
