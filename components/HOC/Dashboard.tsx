@@ -1,7 +1,7 @@
 "use client";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utilss";
 import {
   IconArrowLeft,
   IconBrandTabler,
