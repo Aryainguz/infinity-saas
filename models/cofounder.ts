@@ -13,5 +13,4 @@ const cofounderSchema = new mongoose.Schema({
   personality: { type: String, required: true },
 });
 
-export default mongoose.models.Cofounder ||
-  mongoose.model<ICofounder>("Cofounder", cofounderSchema);
+export default mongoose.models.Cofounder || mongoose.model<ICofounder>("Cofounder", cofounderSchema);
