@@ -1,4 +1,4 @@
-CofounderAI Project Documentation
+CofounderAI Project Documentation - By Team The Xiting Way
 
 1. Introduction
 
