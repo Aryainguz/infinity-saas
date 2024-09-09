@@ -49,37 +49,13 @@ export function AnimatedModalButton() {
               <div className="flex  items-center justify-center">
                 <RocketIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  5 connecting flights
+                  Super Fast AI Agents
                 </span>
               </div>
               <div className="flex items-center justify-center">
                 <ElevatorIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  12 hotels
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
-                <VacationIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  69 visiting spots
-                </span>
-              </div>
-              <div className="flex  items-center justify-center">
-                <FoodIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Good food everyday
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
-                <MicIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Open Mic
-                </span>
-              </div>
-              <div className="flex items-center justify-center">
-                <ParachuteIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Paragliding
+                 1000+ leads
                 </span>
               </div>
             </div>

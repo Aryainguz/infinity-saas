@@ -21,11 +21,11 @@ const LeadsCard = () => {
 
           </span>
           <CardTitle>
-            Generate Leads <span className="text-sm" >(PRO)</span> 
+            Run Campaign <span className="text-sm" >(PRO)</span> 
 
           </CardTitle>
           <CardDescription>
-            Use cofounderAI to generate your leads better than ever.
+            Use cofounderAI to run your creative email campaign better than ever.
           </CardDescription>
         </CardHeader>
         <CardContent>
