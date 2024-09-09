@@ -113,8 +113,9 @@ const WebsiteBuilderChat = () => {
         const apiResponse = await callWebsiteBuilderAPI(newParams);
         console.log(apiResponse)
         setMessages((prev) => [...prev, { from: 'ai', 
-          text: `Click here to view your website: ` + 
-          <Link href={apiResponse.success} target="_blank">View Website</Link> 
+          text: `Click here to view your website: 
+          ${apiResponse.success ? apiResponse.data.url : 'Error creating website.'}
+          ` 
 
 
 
