@@ -106,7 +106,7 @@ export function SiteHeader() {
             <div className="container flex h-14 items-center justify-between">
             <div className="shrink-0">
               <Link href={"/"} className="text-2xl text-white font-bold">
-                infinity
+                cofounder
                 <span className="text-blue-500">AI</span>
               </Link>
             </div>
