@@ -94,12 +94,12 @@ export default function PricingSection() {
       <section id="pricing">
          <div className="mx-auto flex max-w-screen-xl flex-col gap-8 px-4 py-14 md:px-8">
             <div className="mx-auto max-w-5xl text-center">
-               <h4 className="text-xl font-bold tracking-tight text-black dark:text-white">
+               <h4 className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
                   Pricing
                </h4>
 
-               <h2 className="text-5xl font-bold tracking-tight text-black sm:text-6xl dark:text-white">
-                  Simple pricing for everyone.
+               <h2 className="text-4xl font-bold tracking-tight text-black sm:text-6xl dark:text-white">
+                  Cheaper still better.
                </h2>
 
                <p className="mt-6 text-xl leading-8 text-black/80 dark:text-white">
@@ -108,8 +108,7 @@ export default function PricingSection() {
                   <strong>affordable plan</strong>
                   {' '}
                   that&apos;s packed with
-                  the best features for engaging your audience, creating customer
-                  loyalty, and driving sales.
+                  the best features for engaging your audience.
                </p>
             </div>
 

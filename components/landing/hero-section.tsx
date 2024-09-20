@@ -28,11 +28,11 @@ export default function HeroSection() {
                 The only Co-Founder your business needs.
               </span>
             </p>
-            <h1 className="mt-8 text-4xl font-normal text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="mt-8 text-3xl font-normal text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Your AI Powered Chief
               <FlipWords
                 words={[
-                  "Automations Officer.",
+                  "Automation Officer.",
                   "Marketing Officer.",
                   "Technology Officer.",
                 ]}

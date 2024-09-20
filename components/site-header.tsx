@@ -107,7 +107,7 @@ export function SiteHeader() {
             <div className="shrink-0">
               <Link href={"/"} className="text-2xl text-white font-bold">
                 cofounder
-                <span className="text-blue-500">AI</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">AI.</span>
               </Link>
             </div>
 
