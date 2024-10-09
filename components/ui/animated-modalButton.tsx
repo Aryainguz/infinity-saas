@@ -35,6 +35,10 @@ export function AnimatedModalButton() {
 
 
   const handleOnClick =async ()=>{
+    if(emailsData.length == 0){
+      alert("Please upload Emails")
+      return
+    }
     if(campaignInfo.contact =="" || campaignInfo.founder =="" || campaignInfo.industry =="" || campaignInfo.location =="" || campaignInfo.name =="" || campaignInfo.purpose =="" || campaignInfo.website ==""){
       alert("Please Fill All Fields")
       return 
@@ -52,13 +56,13 @@ export function AnimatedModalButton() {
       <Modal>
         <ModalTrigger className="bg-black w-full dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="text-center">
-            Generate Leads
+           Run Campaign
           </span>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Generate Leads With{" "}
+              Run Campaign With{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
                 cofounderAI
               </span>{" "}

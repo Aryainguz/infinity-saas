@@ -42,7 +42,7 @@ const EmailsTable = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Your Leads Database</CardTitle>
+          <CardTitle>Your Emails Database</CardTitle>
           <CardDescription>
             View your recent scrapped or uploaded emails.
           </CardDescription>
