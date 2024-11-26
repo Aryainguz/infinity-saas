@@ -112,7 +112,7 @@ export const Logo = () => {
           href={"/"}
           className="text-2xl text-black font-bold dark:text-white"
         >
-          cofounder
+          Infinity SAAS
           <span className="text-blue-500">AI</span>
         </Link>
       </motion.span>

@@ -6,14 +6,15 @@ import { ny } from '../lib/utils'
 import '../app/styles/globals.css'
 import { EmailsContextProvider } from '@/context/emailsContext'
 import { ClerkProvider } from '@clerk/nextjs'
+import ChatbotLayout from '@/components/chatbot/chatbot-layout'
 
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
 })
 export const metadata: Metadata = {
-  title: 'CoFounder AI',
-  description: 'CoFounder AI',
+  title: 'Infinity SAAS',
+  description: 'Infinity SAAS',
 }
 
 export default function RootLayout({
@@ -31,6 +32,8 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+         <ChatbotLayout>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -39,6 +42,8 @@ export default function RootLayout({
           <EmailsContextProvider>{children}</EmailsContextProvider>
           <Toaster />
         </ThemeProvider>
+    </ChatbotLayout>
+
       </body>
     </html>
     </ClerkProvider>

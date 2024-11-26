@@ -17,7 +17,7 @@ const connectDB = async()=>{
 
     try{
         await mongoose.connect(mongo_uri!,{
-            dbName: "cofounderai",
+            dbName: "Infinity SAAS",
             bufferCommands: true,
         });
 

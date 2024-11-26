@@ -25,16 +25,16 @@ export default function HeroSection() {
        
          <p className="text-sm font-normal tracking-widest uppercase mt-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
-                The only Co-Founder your business needs.
+                The only Marketing Tool your business needs.
               </span>
             </p>
             <h1 className="mt-8 text-3xl font-normal text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-              Your AI Powered Chief
+              Your AI Powered Emails <br />
               <FlipWords
                 words={[
-                  "Automation Officer.",
-                  "Marketing Officer.",
-                  "Technology Officer.",
+                  "That Sells.",
+                  "That works.",
+                  "That Converts.",
                 ]}
               />
             </h1>
@@ -43,7 +43,7 @@ export default function HeroSection() {
               <div className="relative inline-flex items-center justify-center w-full sm:w-auto group">
                 <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
                 <a
-                  href="#"
+                  href="/dashboard"
                   title=""
                   className="relative inline-flex items-center justify-center w-full px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full sm:w-auto"
                   role="button"
@@ -54,7 +54,7 @@ export default function HeroSection() {
               </div>
 
               <a
-                href="#"
+                href="mailto:aryan1372.be22@chitkara.edu.in"
                 title=""
                 className="inline-flex items-center justify-center w-full px-8 py-3 text-base font-normal text-white transition-all duration-200 bg-black border border-gray-600 rounded-full sm:w-auto hover:border-white"
                 role="button"

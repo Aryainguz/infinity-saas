@@ -106,8 +106,8 @@ export function SiteHeader() {
             <div className="container flex h-14 items-center justify-between">
             <div className="shrink-0">
               <Link href={"/"} className="text-2xl text-white font-bold">
-                cofounder
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">AI.</span>
+                Infinity
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500"> AI.</span>
               </Link>
             </div>
 
@@ -162,7 +162,7 @@ export function SiteHeader() {
             >
                <div className="container flex h-14 items-center justify-between">
                   <Link className="text-md flex items-center" href="/">
-                     CoFounder AI
+                     Infinity SAAS
                   </Link>
 
                   <button

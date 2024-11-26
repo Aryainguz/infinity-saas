@@ -25,7 +25,7 @@ const LeadsCard = () => {
 
           </CardTitle>
           <CardDescription>
-            Use cofounderAI to run your creative email campaign better than ever.
+            Use Infinity SAAS to run your creative email campaign better than ever.
           </CardDescription>
         </CardHeader>
         <CardContent>

@@ -78,10 +78,10 @@ export function SiteFooter() {
                         className="text-primary size-8"
                      />
                      <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                        Co-Founder AI
+                        Infinity SAAS
                      </span>
                   </Link>
-                  <p className="max-w-xs">Built By Team - The Xiting Way </p>
+                  <p className="max-w-xs">Built By Team - Aryan </p>
                </div>
                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
                   {footerNavs.map(nav => (
@@ -125,7 +125,7 @@ export function SiteFooter() {
                   {new Date().getFullYear()}
                   {' '}
                   <Link href="/" className="cursor-pointer">
-                     CoFounder AI
+                     Infinity SAAS
                   </Link>
                   . All Rights Reserved.
                </span>
